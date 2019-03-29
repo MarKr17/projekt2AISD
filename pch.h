@@ -31,11 +31,10 @@ void preOrder(Node *root);
 void print_tree(string sp, string sn, Node *v);//wyświtla gaficzną reprezentacje drzewa
 void tablica();
 
-Node * minValueNode(Node* node)
-/* Recursive function to delete a node with given key
- from subtree with given root. It returns root of
- the modified subtree. */
- Node* deleteNode( Node* root, int key)
+Node * minValueNode(Node* node);
+Node* deleteNode( Node* root, int key);
+/* Recursive function to delete a node with given key 
+from subtree with given root. It returns root of the modified subtree. */
 void deletePostOrder(Node* node);
 
 #endif //PCH_H
