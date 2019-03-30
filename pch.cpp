@@ -1,4 +1,4 @@
-﻿// pch.cpp: plik źródłowy odpowiadający wstępnie skompilowanemu nagłówkowi, niezbędny do powodzenia kompilacji
+// pch.cpp: plik źródłowy odpowiadający wstępnie skompilowanemu nagłówkowi, niezbędny do powodzenia kompilacji
 
 #include "pch.h"
 #include<iostream>
@@ -159,6 +159,24 @@ void preOrder(Node *root)
 		preOrder(root->left);
 		preOrder(root->right);
 	}
+}
+void inOrder(Node* root)
+{ 
+    if (root != NULL)
+    {
+        inOrder(root->left);
+        cout << root->key << " ";
+        inOrder(root->right);
+    }
+}
+void postOrder(Node* root)
+{
+    if (root!= NULL)
+    {
+        postOrder(root->left);
+        postOrder(root->right);
+        cout << root->key << " ";
+    }
 }
 void print_tree(string sp, string sn, Node *v)//funkcja wywietlająca graficzną
 {											//reprezentację struktury drzewa 

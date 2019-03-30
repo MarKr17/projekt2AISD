@@ -1,4 +1,4 @@
-﻿// Porady dotyczące rozpoczynania pracy:
+// Porady dotyczące rozpoczynania pracy:
 //   1. Użyj okna Eksploratora rozwiązań, aby dodać pliki i zarządzać nimi
 //   2. Użyj okna programu Team Explorer, aby nawiązać połączenie z kontrolą źródła
 //   3. Użyj okna Dane wyjściowe, aby sprawdzić dane wyjściowe kompilacji i inne komunikaty
@@ -28,6 +28,8 @@ Node* insert(Node* node, int key);//odpowiada a dodawanie drzewa
 // A utility function to print preorder  
 // traversal of the tree.  
 void preOrder(Node *root);
+void inOrder(Node *root);
+void postOrder(Node *root);
 void print_tree(string sp, string sn, Node *v);//wyświtla gaficzną reprezentacje drzewa
 void tablica();
 

@@ -1,4 +1,4 @@
-﻿
+
 #include "pch.h"
 #include<iostream>
 #include<ctime>
@@ -22,7 +22,7 @@ int main()
 	for (; ; )
 	{
 
-		cout << "Co chcesz zrobic" << endl;
+		cout << endl << "Co chcesz zrobic" << endl;
 		cout << "1) Dodanie elementu do drzewa" << endl;
 		cout << "2) Wyszukiwanie elementu z wyświetlanie ścieżki" << endl;
 		cout << "3) Przeglądanie drzewa a)inorder b)preorder c)postorder" << endl;
@@ -66,12 +66,16 @@ int main()
 				cin >> x;
 				switch (x)
 				case 'a':
+                    inOrder(root);
+                    cout << endl;
 					break;
 				case 'b':
 					preOrder(root);
 					cout << endl;
 					break;
 				case 'c':
+                    postOrder(root);
+                    cout << endl;
 					break;
 
 
