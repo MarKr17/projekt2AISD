@@ -30,6 +30,7 @@ Node* insert(Node* node, int key);//odpowiada a dodawanie drzewa
 void preOrder(Node *root);
 void inOrder(Node *root);
 void postOrder(Node *root);
+struct Node* search(Node* root, int key);
 void print_tree(string sp, string sn, Node *v);//wyświtla gaficzną reprezentacje drzewa
 void tablica();
 

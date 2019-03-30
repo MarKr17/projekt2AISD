@@ -3,7 +3,7 @@
 #include<iostream>
 #include<ctime>
 #include<cstdlib>
-#include <cstdio>
+#include<cstdio>
 #include<string>
 #include<sstream>//dzieki temu można przekształcać liczby zapisane w stringu na int
 
@@ -31,7 +31,7 @@ int main()
 		cout << "6) Usuwanie drzewa postorder" << endl;
 		cout << "7) Zakoncz" << endl;
 		cout << "8) Wyswietl drzewo" << endl;
-		char x;
+		char x,tmp;
 		int a;
 		string b;
 		cin >> x;
@@ -57,14 +57,15 @@ int main()
 				}
 			}
 			print_tree("", "", root);
-
-
 			break;
-			/*case '2':
-				break;*/
+			case '2':
+                cin >> a;
+                search(root, a);
+				break;
 			case '3':
-				cin >> x;
-				switch (x)
+				cin >> tmp;
+                switch (tmp)
+            {
 				case 'a':
                     inOrder(root);
                     cout << endl;
@@ -77,8 +78,7 @@ int main()
                     postOrder(root);
                     cout << endl;
 					break;
-
-
+            }
 				break;
 		case '4':
 			//GENEROWANIE CIAGU
@@ -99,9 +99,10 @@ int main()
 			//USUSWANIE DRZEWA POSTORDER
 			deletePostOrder(root);
 			break;
-			/*
+			
 			case '7':
-				break;*/
+                exit(1);
+				break;
 			case '8':
 				print_tree("", "", root);
 				break; 

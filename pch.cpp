@@ -153,31 +153,48 @@ Node* insert(Node* node, int key)//dodawanie nowego elementu
 // traversal of the tree.  
 void preOrder(Node *root)
 {
-	if (root != NULL)
-	{
-		cout << root->key << " ";
-		preOrder(root->left);
-		preOrder(root->right);
-	}
+    if (root == NULL)
+        return;
+    cout << root->key << " ";
+    preOrder(root->left);
+    preOrder(root->right);
 }
 void inOrder(Node* root)
 { 
-    if (root != NULL)
-    {
-        inOrder(root->left);
-        cout << root->key << " ";
-        inOrder(root->right);
-    }
+    if (root == NULL)
+        return;
+    inOrder(root->left);
+    cout << root->key << " ";
+    inOrder(root->right);
 }
 void postOrder(Node* root)
 {
-    if (root!= NULL)
-    {
-        postOrder(root->left);
-        postOrder(root->right);
-        cout << root->key << " ";
-    }
+    if (root == NULL)
+        return;
+    postOrder(root->left);
+    postOrder(root->right);
+    cout << root->key << " ";
 }
+struct Node* search(Node* root, int key)
+{
+    // Base Cases: root is null or key is present at root
+    if (root == NULL || root->key == key)
+    {
+        cout << root->key;
+        return root;
+    }
+    
+    // Key is greater than root's key
+    if (root->key < key)
+    {
+        cout << root->key << " ";
+        return search(root->right, key);
+    }
+    
+    // Key is smaller than root's key
+    cout << root->key << " ";
+    return search(root->left, key);
+} 
 void print_tree(string sp, string sn, Node *v)//funkcja wywietlająca graficzną
 {											//reprezentację struktury drzewa 
 	string s;								//w miejsce sp i sn wstawić ""
